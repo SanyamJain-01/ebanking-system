@@ -1,5 +1,6 @@
 package com.ebanking.beneficiary.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ebanking.auth.domain.User;
 import com.ebanking.shared.domain.BaseEntity;
 import jakarta.persistence.*;
@@ -8,6 +9,7 @@ import jakarta.persistence.*;
 @Table(name = "beneficiaries")
 public class Beneficiary extends BaseEntity {
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

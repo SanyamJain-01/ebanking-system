@@ -26,7 +26,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
        				 "/api/auth/**",
-       				 "/api/beneficiaries/**"
+       				 "/api/beneficiaries/**",
+				       "/api/transactions/**",
+				       "/api/accounts/**"
 			).permitAll()		
                         .anyRequest().authenticated()
                 )

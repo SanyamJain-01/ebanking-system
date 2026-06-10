@@ -1,5 +1,5 @@
 package com.ebanking.account.domain;
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.ebanking.auth.domain.User;
 import com.ebanking.shared.domain.BaseEntity;
 import jakarta.persistence.*;
@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 @Entity
 @Table(name = "accounts")
 public class Account extends BaseEntity {
